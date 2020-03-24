@@ -1,0 +1,9 @@
+p {
+	text-shadow: 0 0 3px #FF0000;
+}
+p {
+	color: thistle;
+	background: black;
+	font: italics;
+	text-align: center;
+}
