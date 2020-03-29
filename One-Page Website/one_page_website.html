@@ -1,21 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<title>Rave Cult?</title>
 		<meta charset="utf-8">
+		<title>Lockdown Fever Party?</title>
+		<link rel="stylesheet" href="./css/one_page_website.css">
+		<link rel="stylesheet" href="./css/photo_video.css">
 	</head>
-		<header>
-			<h1>Lockdown Fever Party</h1>
-			<p>Don't forget your glowsticks and manuals!</p>
-		</header>
 	<body>
+
 		<!-- Nav -->
-		<div>
-			<div>
-				<ul>
-					<a href="#home" id="link"><li><em>Home</em></li></a>
-					<a href="#gallery"><<li><em>Gallery</em></li></a>
-					<a href="#contact"><<li><em>RSVP</em></li></a>
+		<div class="wrap">
+			<div class="menu-container">
+				<ul class="menu">
+					<a href="#home"><li>Home</li></a>
+					<a href="#gallery"><li>Gallery</li></a>
+					<a href="#contact"><li>RSVP</li></a>
 				</ul>
 			</div>
 		</div>
@@ -23,78 +22,84 @@
 		
 		<!--HOME-->
 		<div id="home">
-			<div>
-				<div>
-					<span>Lockdown Fever Party</span>
+			<div class="container">
+				<div class="text-center">
+					<span class="head-main">Lockdown Fever Party</span>
 				</div>
 			</div>
 		</div>
 		<!--End Home -->
 		
 		<!-- GALLERY -->
-		<section>
-			<div id="gallery">
+		<section id="gallery">
+			<div class="containers">
 				<h1>Gallery</h1>
-				<div>
-		<!-- PHOTO-CONTAINER 1 -->
-					<div>
-						<div>
-							<img width="500" height="350" src="./images/TP_1.png" alt="House Tp'ed">
-							<div>
+				<div class="flex-container">
+
+					<!-- PHOTO-CONTAINER 1 -->
+					<div class=photo-container>
+						<div class="photo">
+							<img src="./images/TP_1.png" alt="">
+							<div class="photo-overlay">
 								<h3>Click to see what you're missing out on</h3>
 								<p>You're just moments away from freeing yourself from boredom. Come, join us!</p>
 							</div>
 						</div>
 					</div>
-		<!-- END PHOTO-CONTAINER 1 -->
-		<!-- PHOTO-CONTAINER 2 -->
-					<div>
-						<div>
-							<img width="500" height="350" src="./images/Rave_1.png" alt="Glowstick rave">
-							<div>
+					<!-- END PHOTO-CONTAINER 1 -->
+
+					<!-- PHOTO-CONTAINER 2 -->
+					<div class="photo-container">
+						<div class="photo">
+							<img src="./images/Rave_1.png" alt="">
+							<div class="photo-overlay">
 								<h3>Click to see what you're missing out on</h3>
 								<p>You're just moments away from freeing yourself from boredom. Come, join us!</p>
 							</div>
 						</div>
 					</div>
-		<!-- END PHOTO-CONTAINER 2 -->
-		<!-- PHOTO-CONTAINER 3 -->
-					<div>
-						<div>
-							<img width="500" height="350" src="./images/crab_1.png" alt="crab w a cowboy hat">
-							<div>
+					<!-- END PHOTO-CONTAINER 2 -->
+
+					<!-- PHOTO-CONTAINER 3 -->
+					<div class="photo container">
+						<div class="photo">
+							<img height="500" width="300" src="./images/crab_1.png" alt="">
+							<div class="photo-overlay">
 								<h3>Click to see what you're missing out on</h3>
 								<p>You're just moments away from freeing yourself from boredom. Come, join us!</p>
 							</div>
 						</div>
 					</div>
-		<!-- END PHOTO-CONTAINER 3 -->
-		<!-- Video-CONTAINER 1 -->
-					<div>
-						<div>
+					<!-- END PHOTO-CONTAINER 3 -->
+
+					<!-- Video-CONTAINER 1 -->
+					<div class="video-container">
+						<div class="video">
 							<iframe width="420" height="315" 
 								src="https://www.youtube.com/embed/-50NdPawLVY">
 							</iframe>
-							<div>
+							<div class="video-overlay">
 								<h3>Click to see what you're missing out on</h3>
 								<p>You're just moments away from freeing yourself from boredom. Come, join us!</p>
 							</div>
 						</div>
 					</div>
-		<!-- END Video-CONTAINER 1 -->
-		<!-- Video-CONTAINER 2 -->
-					<div>
-						<div>
+					<!-- END Video-CONTAINER 1 -->
+
+					<!-- Video-CONTAINER 2 -->
+					<div class="video-container">
+						<div class="video">
 							<iframe width="420" height="315" 
 								src="https://www.youtube.com/embed/gPbVRpRgHso?autoplay=1">
 							</iframe>
-							<div>
+							<div class="video-overlay">
 								<h3>Click to see what you're missing out on</h3>
 								<p>You're just moments away from freeing yourself from boredom. Come, join us!</p>
 							</div>
 						</div>
 					</div>
-		<!-- END Video-CONTAINER 2 -->
+					<!-- END Video-CONTAINER 2 -->
+
 				</div>
 			</div>
 		</section>
@@ -103,16 +108,16 @@
 		<!-- RSVP -->
 		<section>
 			<div id="contact">
-				<div>
-					<h1>RSVP</h1>
-					<div>
+				<div class="container">
+					<h1 class="heading-padding">RSVP</h1>
+					<div class="reservation">
 						<h2><span>Are you bored? Stuck in quarantine? Nothing better to do? Come join us today!</span>
 							<br />Who said online raves couldn't be a thing? Not me.
 						</h2>
-						<p>
+						<p class="rsvp text">
 							Please provide us with your basic contact information.
 						</p>
-						<div>
+						<div class="form-rsvp">
 							<form action="" method="post">
 								<input class="rsvp" type="text" value="First Name">
 								<input class="rsvp" type="text" value="Last Name">
@@ -121,8 +126,8 @@
 								<div class="form-spacer">
 									<label class="terms">Terms and Conditions</label>
 								</div>
-								<div>
-									<input type="submit" value="Submit">
+								<div class="submit">
+									<input type="submit" value="submit">
 								</div>
 							</form>
 						</div>
@@ -133,7 +138,7 @@
 		<!--END RSVP-->
 		
 		<!-- FOOTER -->
-		<div>
+		<div id="footer">
 			www.coronatime.com &nbsp;|&nbsp; &copy; 2020
 		</div>
 		<!-- END FOOTER -->
