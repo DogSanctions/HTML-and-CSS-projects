@@ -64,10 +64,15 @@ background-image: url("../images/icons/smileyface2.png");
 }
 
 /*------------------------------------------------------
-    HOVER EFFECTS
+    HOVER, TRANSLATE, & TRANSFORM EFFECTS
 ------------------------------------------------------*/
 .container .squares:nth-child(-n+4):hover {
     background-image:url("../images/icons/smileyface1.png");
+    transform: scale(.5);
+    animation-name: race;
+    animation-duration: 2.5e;
+    animation-iteration-count: infinite;
+    animation-timing-function: cubic-bezier(2.5,.2.3,2);
 }
 
 .squares:nth-child(1):hover {
