@@ -31,46 +31,68 @@
 		<!--End Home -->
 		
 		<!-- GALLERY -->
-		<section id="gallery">
-			<div class="containers">
-				<h1>Gallery</h1>
-				<div class="flex-container">
+<section id="gallery">
+	<div class="containers">
+		<h1>Gallery</h1>
+	<div class="flex-container">
 
-					<!-- PHOTO-CONTAINER 1 -->
-					<div class="photo-container">
-						<div class="photo">
-							<img src="./images/TP_1.png" alt="">
-							<div class="photo-overlay">
-								<h3>Click to see what you're missing out on</h3>
-								<p>You're just moments away from freeing yourself from boredom. Come, join us!</p>
-							</div>
-						</div>
-					</div>
-					<!-- END PHOTO-CONTAINER 1 -->
+		<div class="row">
+			<div class="column">
+	  			<img src="./images/TP_1.png" onclick="openModal();currentSlide(1)" class="hover-shadow">
+		</div>
+			<div class="column">
+	  			<img src="./images/crab_1.png" onclick="openModal();currentSlide(2)" class="hover-shadow">
+		</div>
+			<div class="column">
+	  			<img src="./images/Rave_1.png" onclick="openModal();currentSlide(3)" class="hover-shadow">
+		</div>
+		</div>
 
-					<!-- PHOTO-CONTAINER 2 -->
-					<div class="photo-container">
-						<div class="photo">
-							<img src="./images/Rave_1.png" alt="">
-							<div class="photo-overlay">
-								<h3>Click to see what you're missing out on</h3>
-								<p>You're just moments away from freeing yourself from boredom. Come, join us!</p>
-							</div>
-						</div>
-					</div>
-					<!-- END PHOTO-CONTAINER 2 -->
-
-					<!-- PHOTO-CONTAINER 3 -->
-					<div class="photo container">
-						<div class="photo">
-							<img height="218" width="169" src="./images/crab_1.png" alt="">
-							<div class="photo-overlay">
-								<h3>Click to see what you're missing out on</h3>
-								<p>You're just moments away from freeing yourself from boredom. Come, join us!</p>
-							</div>
-						</div>
-					</div>
-					<!-- END PHOTO-CONTAINER 3 -->
+  
+  <!-- The Modal/Lightbox -->
+ 	<div id="myModal" class="modal">
+	<span class="close cursor" onclick="closeModal()">&times;</span>
+	<div class="modal-content">
+  
+	  <div class="mySlides">
+		<div class="numbertext">1 / 3</div>
+		<img src="./images/TP_1.png" style="width:100%">
+	  </div>
+  
+	  <div class="mySlides">
+		<div class="numbertext">2 / 3</div>
+		<img src="./images/crab_1.png" style="width:100%">
+	  </div>
+  
+	  <div class="mySlides">
+		<div class="numbertext">3 / 3</div>
+		<img src="./images/Rave_1.png" style="width:100%">
+	  </div>
+  
+	  <!-- Next/previous controls -->
+	  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+	  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  
+	  <!-- Caption text -->
+	  <div class="caption-container">
+		<p id="caption"></p>
+	  </div>
+  
+	  <!-- Thumbnail image controls -->
+	  <div class="column">
+		<img class="demo" src="./images/TP_1.png" onclick="currentSlide(1)" alt="Nature">
+	  </div>
+  
+	  <div class="column">
+		<img class="demo" src="./images/crab_1.png" onclick="currentSlide(2)" alt="Sea">
+	  </div>
+  
+	  <div class="column">
+		<img class="demo" src="./images/Rave_1.png" onclick="currentSlide(3)" alt="Air">
+	  </div>
+  
+	</div>
+	</div>
 
 					<!-- Video-CONTAINER 1 -->
 					<div class="video-container">
@@ -142,7 +164,7 @@
 			www.coronatime.com &nbsp;|&nbsp; &copy; 2020
 		</div>
 		<!-- END FOOTER -->
-							
+		<script src = "JS/one_page_website.js"></script>
 	</body>
 </html>
 					
