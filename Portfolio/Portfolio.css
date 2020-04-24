@@ -1,14 +1,31 @@
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0%;
+    opacity: 1;
+    transition: 3s opacity;
+    letter-spacing: .2vw;
+    font-family: Avant Garde, Helvetica;
+    font-size: 1.5vw;
+}
+
+body.fade-out {
+    opacity: .1;
+    transition: none;
 }
 
 .Navbar {
     overflow:hidden;
-    background-color: blanchedalmond;
+    background-color: black;
     position: fixed;
     top: o;
     width: 100%;
     z-index: 1;
+ position: fixed;
+    -webkit-animation: moveNav 5s;
+ animation: moveNav 5s;
 }
 /* TEXT */
 .Navbar a {
@@ -20,12 +37,33 @@ body {
     font-family: Helvetica, sans-serif, Arial, 'Times New Roman', Times, serif;
     font-size: 22px;
     text-align: center;
+ position: relative;
+    -webkit-animation: movenavText 5.75s;
+ animation: movenavText 5.75s;
+    letter-spacing: .2vw;
 }
 
+@keyframes moveNav {
+    from {top: -100vw;}
+    to {top: 0px;}
+}
+
+@keyframes movenavText {
+    from {top: -100vw;}
+    to {top: 0vw;}
+}
+
+@keyframes movevideoText {
+    from {top: -100vw;}
+    to {top: 0px;}
+}
 .Navbar a:hover {
     background-color: #f5fcfd;
     color: black;
     font-weight: bold;
+    cursor: pointer;
+    -webkit-transition-duration: 1s;
+    transition-duration: 1s;
 }
 
 /* HOME BUTTON */
@@ -33,51 +71,158 @@ body {
     background-color: darkgrey;
 }
 
+@keyframes zoominoutsinglefeatured {
+    0% {
+        transform: scale(1.5,1.5);
+    }
+    100%{
+        transform: scale(1,1);
+    }
+}
+
 #banana {
     position: fixed;
     right: 0;
     bottom: 0;
-    min-width: 100%;
+    min-height: 100%;
+    top: 0;
     z-index: -1;
+    animation: zoominoutsinglefeatured 5s;
 }
 
 .Video_Text {
     background: rgba(0, 0, 0, 0.5);
     color: white;
     width: 100%;
-    padding: 20px;
+    padding-top: .1vh;
+    padding-bottom: 1vh;
     margin-top: 23%;
+ position: relative;
+    -webkit-animation: moveNav 4s;
+ animation: movevideoText 4s;
 }
 
-*{
-    box-sizing: border-box;
+#Slideshow_Background {
+    background: rgba(255, 255, 255, 0.35);
+}
+
+.mySlides {
+    display: none;
+}
+
+@-webkit-keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+#Slideshow_Container {
+    width:39.5vw;
+    height: auto;
+    padding-top: 4%;
+    position: relative;
+    margin: auto;
+}
+
+.Slide_Show_Images {
+    vertical-align: middle;
+    height: auto;
+    box-shadow: 0px 5px 10px 12px rgba(0, 0, 0, .75);
+    width: auto;
+}
+
+.Previous, .Next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 2vw;
+    margin-top: -0vw;
+    color: darkgray;
+    font-weight: bold;
+    font-size: 1.5vw;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    transition: 0.6s ease;
+}
+
+.Next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.Previous:hover, .Next:hover {
+    background-color: rgba(0, 0, 0, .8);
+    color: white;
+}
+
+.text {
+    color: white;
+    padding: 1vw;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    font-family: Perpetua, Rockwell Extra Bold;
+    letter-spacing: .1vw; 
+    font-size: 1.5vw;
+    background-color: rgba(0,0,0,0.75);
+    font-weight: bold;
+    border-radius: 7px 7px 7px 7px;
+}
+
+.Slide_Number {
+    color: white;
+    position: absolute;
+    top: 0;
+    font-family: Perpetua, Rockwell Extra Bold;
+    letter-spacing: .1vw; 
+    font-size: 1.5vw;
+    font-weight: bold;
+    display: none;
+}
+
+.dot {
+    cursor: pointer;
+    height: 1vw;
+    width: 1vw;
+    margin: .25vw;
+    background-color: white;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+    position: relative;
+    z-index: 1;
+}
+
+.active, .dot:hover {
+    background-color: black;
+}
+  
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;  
+}
+
+* { 
+	box-sizing: border-box; 
 }
 
 .Column_1 {
     float: left;
     width: 50%;
-    padding: 10px;
-    padding-top: 3%;
-    height: 400px;
-    background-color: grey;
+    padding: 1.6%;
+    background-color: #f2f2f2;
+    height: 448px;
 }
 
 .Column_2 {
     float: left;
     width: 50%;
-    padding: 10px;
-    padding-top: 1.9%;
-    height: 400px;
-    background-color: slategray;
-}
-
-.Column_3 {
-    float: left;
-    width: 50%;
-    padding: 10px;
-    padding-top: 3.5%;
-    height: 450px;
-    background-color: silver;
+    padding: 1.6%;
+    background-color: #4d4d4d;
+    height: 448px;
 }
 
 .Row:after {
@@ -91,16 +236,16 @@ h1 {
     font-family: Helvetica, sans-serif, 'Times New Roman', Times, serif;
     text-align: center;
     margin-top: 3%;
-    color: #000000 
+    color: #1a1a1a 
 }
 
 p {
     font-family: Helvetica, sans-serif, 'Times New Roman', Times, serif;
     text-align: justify;
-    letter-spacing: 1px;
-    font-size:22px;
-    padding-left: 20px;
-    padding-right: 20px;
+    letter-spacing: .1vw;
+    font-size: 1.5vw;
+    padding-left: 1vw;
+    padding-right: 1vw;
 }
 
 center {
@@ -124,62 +269,20 @@ img {
     filter: grayscale(75%);
     border-radius: 8px;
     max-width: 100%;
-    height: 340px;
-    margin-left: auto;
-    margin-right: auto;
+    height: 100%;
+    margin: auto auto auto auto;
     display: block;
-}
-
-input[type=text] {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #000;
-    border-radius: 4px;
-    box-sizing: border-box;
-    margin-top: 6px;
-    margin-bottom: 16px;
-    resize: vertical;
-    font-family: Helvetica, sans-serif, 'Times New Roman', Times, serif;
-}
-
-input[type=submit] {
-    background-color: black;
-    color: blanchedalmond;
-    font-weight: bold;
-    padding: 15px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    font-family: Helvetica, sans-serif, 'Times New Roman', Times, serif;
-}
-
-input[type=submit]:hover {
-    background-color: darkgray;
-    color: gold;
-    font-weight: bold;
-    transform: scale(1.5);
-    transition: transform 1.5s;
-}
-
-form {
-    border-radius: 5px;
-    background-color: #f2f2f2;
-    padding: 20px;
-    font-family: Helvetica, sans-serif, 'Times New Roman', Times, serif;
 }
 
 center:hover {
     transition: transform 2s;
-	transform: scale(1.1);
+    transform: scale(1.1);
 }
 
 p:hover {
-	color: gold;	
+    color: #00004d;
     transition: transform 1s;
-	transform: scale(1.01);
+    transform: scale(1.01);
 }
 
 h1:hover {
@@ -190,8 +293,95 @@ h1:hover {
 img:hover {
     filter: grayscale(5%);
     transition: transform 1s;
-	transform: scale(1.1);
+    transform: scale(1.1);
 }
+
+@keyframes movePopup {
+    from {right: -40vw;}
+    tp {bottom: 1.75vw;}
+}
+
+.Pop_Up_Button {
+    bottom: 1.75vw;
+    right: 1.75vw;
+    width: 25vw;
+    background-color:white ;
+    color: black;
+    border: solid;
+    position: fixed;
+    -webkit-animation: movePopup 5s;
+    animation: movePopup 5s;
+}
+
+.form-popup {
+    border: 3px solid #f0f1f0;
+    z-index: 8;
+    display: none;
+    position: fixed;
+    bottom: 6px;
+    right: 6px;
+}
+
+.form-container {
+    max-width: 49vw;
+    padding: 9px;
+    background-color: white;
+}
+
+.form-container input[type=text], .form-container input[type=password] {
+    width: 100%;
+    padding: .93vw;
+    margin: .6vw 0 .6vw 0;
+    border: none;
+    background: Gainsboro;
+    font-family: Helvetica, sans-serif, 'Times New Roman', Times, serif;
+    font-size: 1vw;
+}
+
+.form-container .btn {
+    background-color: white;
+    color: black;
+    border-color: black;
+    margin-bottom: 1vh;
+}
+
+.form-container .cancel {
+    background-color: black;
+    color: white;
+    border-color: gray;
+}
+
+button {
+    font-family: 'Trebuchet MS', Optima;
+    letter-spacing: .3vw;
+    font-size: 1.5vw;
+    font-weight: bold;
+    padding: 1.5vw 1.5vw;
+    border-style: solid;
+    cursor: pointer;
+    width: 100%;
+    height: auto;
+}
+
+button:hover, .form-container .btn-hover{
+    color: white;
+    background-color: black;
+    -webkit-transition-duration: 1s;
+    transition-duration: 1s;
+    border-style: solid;
+    border-color: black;
+}
+
+.form-container .cancel:hover{
+    color: white;
+    background-color: darkred;
+    -webkit-transition-duration: 1s; 
+    transition-duration: 1s;
+    border-style: solid;
+    border-color: black;
+}	
+
+
 
 footer {
     padding: 2%;
