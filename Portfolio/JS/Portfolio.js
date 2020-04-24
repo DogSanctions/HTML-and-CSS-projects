@@ -21,11 +21,12 @@ $(document).ready(function(){
   
   
   function openForm() {
+    console.log('open');
     document.getElementById("myForm").style.display = "block";
   }
   
   function closeForm() {
+    console.log('close');
     document.getElementById("myForm").style.display = "none";
-    this.Close();
   }
 

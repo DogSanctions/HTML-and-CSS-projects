@@ -31,7 +31,7 @@ body.fade-out {
 .Navbar a {
     float: left;
     display: block;
-    color: black;
+    color: darkgrey;
     padding: 15px;
     text-decoration: none;
     font-family: Helvetica, sans-serif, Arial, 'Times New Roman', Times, serif;
@@ -58,7 +58,7 @@ body.fade-out {
     to {top: 0px;}
 }
 .Navbar a:hover {
-    background-color: #f5fcfd;
+    background-color: black;
     color: black;
     font-weight: bold;
     cursor: pointer;
@@ -68,7 +68,7 @@ body.fade-out {
 
 /* HOME BUTTON */
 .Navbar a.active {
-    background-color: darkgrey;
+    background-color: black;
 }
 
 @keyframes zoominoutsinglefeatured {
@@ -306,7 +306,7 @@ img:hover {
     right: 1.75vw;
     width: 25vw;
     background-color:white ;
-    color: black;
+    color: rgb(41, 41, 41);
     border: solid;
     position: fixed;
     -webkit-animation: movePopup 5s;
@@ -385,5 +385,5 @@ button:hover, .form-container .btn-hover{
 
 footer {
     padding: 2%;
-    background-color: blanchedalmond;
+    background-color: rgb(155, 155, 154);
 }
